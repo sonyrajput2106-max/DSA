@@ -89,6 +89,19 @@ public class Strings {
         for (char ch : arr) {
             System.out.println("value of char :" + ch);
         }
+
+        // split method -> output-> string array
+        String input = "My, name , is, sona, rajput";
+        String[] words = input.split(",");
+        for (String str1 : words) {
+            System.out.println(str1);
+        }
+
+
+        //replace method
+        String surName = "Rajput";
+        surName = surName.replace('a', 'b');
+        System.out.println(surName);
     }
 
 }
