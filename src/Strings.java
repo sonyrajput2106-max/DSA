@@ -11,55 +11,163 @@ public class Strings {
 //    }
 
     //2 question
-    static int getLengthOfString(String str) {
-        char[] arr = str.toCharArray();
-        int len = arr.length;
-        return len;
-    }
+//    static int getLengthOfString(String str) {
+//        char[] arr = str.toCharArray();
+//        int len = arr.length;
+//        return len;
+//    }
+//
+//    //3 question
+//    static int getVowelCount(String str) {
+//        int count = 0;
+//        for (int i = 0; i < str.length(); i++) {
+//            char ch = str.charAt(i);
+//            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+//                count++;
+//            }
+//        }
+//        return count;
+//    }
+//
+//    //4 question
+//    static String reverseString(String str) {
+//        String reverse = "";
+//        int n = str.length();
+//        for (int i = n - 1; i >= 0; i++) {
+//            char ch = str.charAt(i);
+//            reverse = reverse + ch;
+//        }
+//        return reverse;
+//    }
+//
+//    //5 question
+//    static boolean isPalindrome(String str) {
+//        String original = str;
+//        String reverse = reverseString(original);
+//
+//        for (int i = 0; i < original.length(); i++) {
+//            char ch1 = original.charAt(i);
+//            char ch2 = reverse.charAt(i);
+//            if (ch1 != ch2) {
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
 
-    //3 question
-    static int getVowelCount(String str) {
+    // 5 question
+//    static int getConsonents(String str) {
+//        int count = 0;
+//        for (int i = 0; i < str.length(); i++) {
+//            char ch = str.charAt(i);
+//            if (ch != 'a' && ch != 'e' && ch != 'i' && ch != 'o' && ch != 'u')
+//                count++;
+//        }
+//        return count;
+//    }
+
+    // 6 question
+//    static String toUpperCase(String str) {
+//        String result = " ";
+//
+//        for (int i = 0; i < str.length(); i++) {
+//            char ch = str.charAt(i);
+//
+//            if (ch >= 'a' && ch <= 'z') {
+//                ch = (char)(ch-32);
+//            }
+//            result = result +ch;
+//        }
+//        return result;
+//
+//    }
+
+    //or
+//    static String toUpperCase(String str) {
+//        char[] arr = str.toCharArray();
+//
+//        for (int i = 0; i < str.length(); i++) {
+//            if (arr[i] >= 'a' && arr[i] <= 'z') {
+//                arr[i] = (char) (arr[i] - 32);
+//            }
+//        }
+//        return new String(arr);
+//    }
+
+    //7 question
+//
+
+    //8 question
+//    static int totalSpaces(String str) {
+//        int count = 0;
+//
+//        for (int i = 0; i < str.length(); i++) {
+//            char ch = str.charAt(i);
+//
+//            if (ch == ' ') {
+//                count++;
+//            }
+//        }
+//        return count;
+//    }
+
+//    static String removeSpaces(String str) {
+//        String s = "";
+//
+//        for (int i = 0; i < str.length(); i++) {
+//            char ch = str.charAt(i);
+//
+//            if (ch != ' ') {
+//                s = s + ch;
+//            }
+//        }
+//        return s;
+//    }
+
+//    static Boolean checkDigits(String str) {
+//        char[] arr = str.toCharArray();
+//        for (int i = 0; i < str.length(); i++) {
+//            char ch = str.charAt(i);
+//
+//            if (ch >= '0' && ch <= '9') {
+//                return true;
+//            }
+//        }
+//
+//        return false;
+//    }
+
+    //10 question
+    static int countWords(String str) {
         int count = 0;
+        char[] arr = str.toCharArray();
+
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
-            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+
+            if (ch != ' ') {
                 count++;
+
             }
         }
+
         return count;
     }
 
-    //4 question
-    static String reverseString(String str) {
-        String reverse = "";
-        int n = str.length();
-        for (int i = n - 1; i >= 0; i++) {
-            char ch = str.charAt(i);
-            reverse = reverse + ch;
-        }
-        return reverse;
-    }
-
-    //5 question
-    static boolean isPalindrome(String str) {
-        String original = str;
-        String reverse = reverseString(original);
-
-        for (int i = 0; i < original.length(); i++) {
-            char ch1 = original.charAt(i);
-            char ch2 = reverse.charAt(i);
-            if (ch1 != ch2) {
-                return false;
-            }
-        }
-        return true;
-    }
 
     static void main() {
-        String str2 = "Sona";
+        String str2 = " Abra ka Dabra ";
 //        printString(str2);
-        System.out.println(getVowelCount(str2));
-        System.out.println(reverseString(str2));
+//        System.out.println(getVowelCount(str2));
+//        System.out.println(reverseString(str2));
+//        System.out.println(getConsonents(str2));
+//        System.out.println(toUpperCase(str2));
+//        System.out.println(frequencyOfChar(str2));
+//        System.out.println(totalSpaces(str2));
+//        System.out.println(removeSpaces(str2));
+//        System.out.println(checkDigits(str2));
+        System.out.println(countWords(str2));
+
 
         //creation of string
 //        String firstName = "sona";  //-> stored in string pool of heap memory
