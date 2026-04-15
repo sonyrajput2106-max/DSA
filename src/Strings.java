@@ -111,18 +111,18 @@ public class Strings {
 //        return count;
 //    }
 
-//    static String removeSpaces(String str) {
-//        String s = "";
-//
-//        for (int i = 0; i < str.length(); i++) {
-//            char ch = str.charAt(i);
-//
-//            if (ch != ' ') {
-//                s = s + ch;
-//            }
-//        }
-//        return s;
-//    }
+    static String removeSpaces(String str) {
+        String s = "";
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (ch != ' ') {
+                s = s + ch;
+            }
+        }
+        return s;
+    }
 
 //    static Boolean checkDigits(String str) {
 //        char[] arr = str.toCharArray();
