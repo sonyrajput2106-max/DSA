@@ -167,6 +167,7 @@ public class Strings {
 //        System.out.println(removeSpaces(str2));
 //        System.out.println(checkDigits(str2));
         System.out.println(countWords(str2));
+        //system.out.println();
 
 
         //creation of string
