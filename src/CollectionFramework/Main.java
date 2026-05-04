@@ -130,6 +130,7 @@ public class Main {
 //         list.addFirst(45);
 
 
+        //Linked list
         LinkedList<Integer> ll = new LinkedList<>();
         ll.add(10);
         System.out.println(ll);
