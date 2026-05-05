@@ -1,9 +1,9 @@
 package CollectionFrameworkmod2;
 
+import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.Queue;
 
-public class ArrayDeque {
+public class ArrayDeques {
     static void main() {
         //Array implementation of queue
         Deque<Integer> q = new ArrayDeque<>();

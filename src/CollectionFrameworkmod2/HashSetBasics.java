@@ -12,12 +12,12 @@ public class HashSetBasics {
         HashSet<Student> set = new HashSet<>();
 
 
-        Student s1 = new Student(1, "anita");
-        Student s2 = new Student(1, "anita");
-        Student s3 = new Student(1, "anita");
-        set.add(s1);
-        set.add(s2);
-        set.add(s3);
+//        Student s1 = new Student(1, "anita");
+//        Student s2 = new Student(1, "anita");
+//        Student s3 = new Student(1, "anita");
+//        set.add(s1);
+//        set.add(s2);
+//        set.add(s3);
 
         System.out.println(set);
 
