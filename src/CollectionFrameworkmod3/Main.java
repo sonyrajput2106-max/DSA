@@ -12,12 +12,11 @@ public class Main {
         }
 
 //List<Student> students = new ArrayList<>();
-//
+
 //students.add(new Student(19 ,"Sona" , 50));
 //students.add(new Student(23 ,"mona" , 40));
 //students.add(new Student(23 ,"tona" , 57));
 //students.add(new Student(24 ,"rona" , 55));
-//
 //        System.out.println(students);
 //
 //        Collections.sort(students, new WeightComparator());
