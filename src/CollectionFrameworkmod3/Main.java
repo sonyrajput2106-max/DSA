@@ -10,7 +10,7 @@ public class Main {
         for (int a : arr){
             System.out.print(a+" ");
         }
-//
+
 //List<Student> students = new ArrayList<>();
 //
 //students.add(new Student(19 ,"Sona" , 50));
