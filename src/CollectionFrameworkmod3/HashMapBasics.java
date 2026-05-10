@@ -16,7 +16,7 @@ public class HashMapBasics {
         mapping.put("en" , "England");
         mapping.put("us", "United States");
 
-
+//printing mapping
         System.out.println(mapping);
 
         Map<String , String> table = new HashMap<>();
