@@ -12,8 +12,21 @@ public class BitwiseOperators {
 //        System.out.println( a<< 1); //  left shift ->  multiplied by 2
 
 
-        int n = 5;
+        //left shift
+//        int n = 5;
+//for (int i =1; i<=32; i++){
+//    n = n<<1;
+//    System.out.println(n);
+//    System.out.println();
+//}
 
+//right shift (>>) -> divide by 2
+        int n = 100;
+for (int i =1; i<=10; i++){
+    n = n>> 1;
+    System.out.println(n);
+    System.out.println();
+}
    }
 
 }
