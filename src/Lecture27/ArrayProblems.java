@@ -38,6 +38,44 @@ public class ArrayProblems {
     }
 
 
+    //Getting max element from the array
+    static int getMaximum(int [] arr){
+        int max = arr[0];
+
+        for (int i =0; i< arr.length;i++){
+
+            //with Math.max() function
+//            max = Math.max(max, arr[i]);
+            if (arr[i] > max){
+                max = arr[i];
+            }
+        }
+        //jab m yaha pahuchuga matlab sara array traverse ho chuka h nd
+        //max has the highest value
+        return max;
+    }
+
+
+    //finding sum of =ve and -ve no.s in the array
+    static int[] getSum(int [] arr){
+        int positiveSum =0;
+        int negativeSum = 0;
+
+        for (int i =0; i< arr.length;i++){
+            if (arr[i] >0){
+                positiveSum = positiveSum+arr[i];
+            }
+            else{
+                negativeSum += arr[i];
+            }
+        }
+        int ans [] = {positiveSum,negativeSum};
+        return ans;
+    }
+
+
+    //count no of 0's and 1's
+
     static void main() {
 //        int[] arr ={2,4,5,2,5};
 //        System.out.println(getAverage(arr));
@@ -48,9 +86,18 @@ public class ArrayProblems {
 //            System.out.println(i+" ");
 //        }
 
-        int arr[] ={2,4,3,6,7};
-        boolean ans = findElement(arr);
-        System.out.println(ans);
+//        int arr[] ={2,4,3,6,7};
+//        boolean ans = findElement(arr);
+//        System.out.println(ans);
+
+
+//        int arr[] ={4,6,8,43,6,4};
+//        System.out.println(getMaximum(arr));
+
+        int arr[] ={ 2,5,-4,7,-6,-9,6};
+        int ans[] = getSum(arr);
+        System.out.println("positive sum is :" + ans[0]);
+        System.out.println("negative sum is: " + ans[1]);
 
     }
 }
