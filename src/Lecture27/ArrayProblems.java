@@ -91,6 +91,29 @@ public class ArrayProblems {
         return ans;
     }
 
+
+    //getting first unsorted element in the array
+    static int getUnsortedElem(int [] arr){
+        for (int i =0; i<arr.length;i++){
+          if (arr[i+1] <= arr[i]){
+              return arr[i+1];
+          }
+        }
+        //out of the loop
+        return -1;
+    }
+
+
+    //swapping alternate elements in the array
+    static  void swapAlternateElem(int [] arr){
+        int temp;
+        for (int i=0; i<arr.length;i+=2){
+         temp = arr[i];
+         arr[i]= arr[i+1];
+         arr[i+1] = temp;
+        }
+    }
+
     static void main() {
 //        int[] arr ={2,4,5,2,5};
 //        System.out.println(getAverage(arr));
@@ -115,10 +138,21 @@ public class ArrayProblems {
 //        System.out.println("negative sum is: " + ans[1]);
 
 
-        int arr[] ={1,1,0,1,0,0,1,0};
-        int ans []= getCount(arr);
-        System.out.println("number of 0's are:" + ans[0]);
-        System.out.println("number of 1's are :" + ans[1]);
+//        int arr[] ={1,1,0,1,0,0,1,0};
+//        int ans []= getCount(arr);
+//        System.out.println("number of 0's are:" + ans[0]);
+//        System.out.println("number of 1's are :" + ans[1]);
+
+
+//        int[] arr = {1,2,5,4,7};
+//        System.out.println(getUnsortedElem(arr));
+
+        int [] arr = {1,2,3,4,5,6};
+        swapAlternateElem(arr);
+
+        for (int i :arr){
+            System.out.print(i +" ");
+        }
 
     }
 }
