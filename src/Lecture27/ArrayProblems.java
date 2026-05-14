@@ -75,6 +75,21 @@ public class ArrayProblems {
 
 
     //count no of 0's and 1's
+    static int[] getCount (int[] arr){
+        int zeroCount = 0;
+        int oneCount = 0;
+
+        for (int i =0; i<arr.length;i++){
+            if (arr[i] == 0){
+                zeroCount +=1;
+            }
+            else{
+                oneCount +=1;
+            }
+        }
+        int ans [] ={zeroCount,oneCount};
+        return ans;
+    }
 
     static void main() {
 //        int[] arr ={2,4,5,2,5};
@@ -94,10 +109,16 @@ public class ArrayProblems {
 //        int arr[] ={4,6,8,43,6,4};
 //        System.out.println(getMaximum(arr));
 
-        int arr[] ={ 2,5,-4,7,-6,-9,6};
-        int ans[] = getSum(arr);
-        System.out.println("positive sum is :" + ans[0]);
-        System.out.println("negative sum is: " + ans[1]);
+//        int arr[] ={ 2,5,-4,7,-6,-9,6};
+//        int ans[] = getSum(arr);
+//        System.out.println("positive sum is :" + ans[0]);
+//        System.out.println("negative sum is: " + ans[1]);
+
+
+        int arr[] ={1,1,0,1,0,0,1,0};
+        int ans []= getCount(arr);
+        System.out.println("number of 0's are:" + ans[0]);
+        System.out.println("number of 1's are :" + ans[1]);
 
     }
 }
