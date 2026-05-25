@@ -80,12 +80,21 @@ public class ArrayManipulationProblem {
             if (freq.get(num) > maxCount) {
             maxCount = freq.get(num);
             mode = num;
-
             }
         }
 
         //jab loop se bahar aaoge toh max freq wali key ready hogi
         return mode;
+    }
+
+
+    //printing highest nd lowest frequency element
+    static int highAndLowestFreq(int arr[] ) {
+        HashMap<Integer,Integer> map = new HashMap<>();
+
+        int minCount =0;
+        int maxCount  = 0;
+
     }
 
     static void main() {
