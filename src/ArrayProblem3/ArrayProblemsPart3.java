@@ -23,6 +23,11 @@ public class ArrayProblemsPart3 {
         }
         return arr;
     }
+
+    //finding the missing number
+    static int findMissingNumber(int[] arr){
+
+    }
     static void main() {
         int[] arr = {1,0,1,0,0,1,1};
         System.out.println(sortZeroOnes(arr));
