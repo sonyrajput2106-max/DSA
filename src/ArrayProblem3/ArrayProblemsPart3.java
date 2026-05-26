@@ -26,14 +26,40 @@ public class ArrayProblemsPart3 {
 
     //finding the missing number
     static int findMissingNumber(int[] arr){
+int xorSum = 0;
+//xor with all array elements
+        for (int n: arr){
+            xorSum = xorSum^n;
+        }
+        //xor with all elements in the range
+        int n = arr.length;
+        for (int i =0; i <=n ; i++){
+            xorSum = xorSum^i;
+        }
+        return xorSum;
+    }
 
+
+    // finding the unique element from the array
+    static int uniqueElement(int [] arr1 ){
+        int xorSum2 =0;
+        for (int n :arr1){
+            xorSum2 = xorSum2^n;
+        }
+        return xorSum2;
     }
     static void main() {
-        int[] arr = {1,0,1,0,0,1,1};
-        System.out.println(sortZeroOnes(arr));
-        for (int i :arr){
-            System.out.print(i + " ");
-        }
+//        int[] arr = {1,0,1,0,0,1,1};
+//        System.out.println(sortZeroOnes(arr));
+//        for (int i :arr){
+//            System.out.print(i + " ");
+//        }
 
+        int [] arr ={0,4,3,1,2};
+        System.out.println(findMissingNumber(arr));
+
+
+        int[] arr1 ={ 2,3,4,3,2,1};
+        System.out.println(uniqueElement(arr1));
     }
 }
