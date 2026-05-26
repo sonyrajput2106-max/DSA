@@ -89,13 +89,13 @@ public class ArrayManipulationProblem {
 
 
     //printing highest nd lowest frequency element
-    static int highAndLowestFreq(int arr[] ) {
-        HashMap<Integer,Integer> map = new HashMap<>();
-
-        int minCount =0;
-        int maxCount  = 0;
-
-    }
+//    static int highAndLowestFreq(int arr[] ) {
+//        HashMap<Integer,Integer> map = new HashMap<>();
+//
+//        int minCount =0;
+//        int maxCount  = 0;
+//
+//    }
 
     static void main() {
         int arr[] ={1,2,2,2,4,5,5,5,5,3,4,5,6};
