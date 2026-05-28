@@ -1,7 +1,7 @@
 package ArrayProblemsPart4;
 
 import java.util.Arrays;
-
+import java.util.HashMap;
 
 
 public  class ArrayProblem4 {
@@ -110,7 +110,24 @@ public  class ArrayProblem4 {
     }
 
 
-    // pivot index
+    //find first repeating element
+    static int firstRepeatingElement(int arr[]){
+        HashMap<Integer, Integer> freq = new HashMap<>();
+
+        //counting frequencies
+        for(int num : arr){
+            freq.put(num, freq.getOrDefault(num , 0)+1);
+
+        }
+
+        //finf first repeating element
+        for(int num :arr){
+            if(freq.get(num)>1){
+                return num;
+            }
+        }
+        return -1;
+    }
 
     static void main() {
 //        int[] arr ={2,5,7,3,1};
@@ -124,11 +141,15 @@ public  class ArrayProblem4 {
 
 
         //duplicates removed
-        int [] nums ={1,1,1,2,2,3,3,3,4,4,4};
-        int k = removeDuplicates(nums);
-        System.out.println(removeDuplicates(nums));
-        for (int i=0; i<k ; i++){
-            System.out.print(nums[i]+" ");
-        }
+//        int [] nums ={1,1,1,2,2,3,3,3,4,4,4};
+//        int k = removeDuplicates(nums);
+//        System.out.println(removeDuplicates(nums));
+//        for (int i=0; i<k ; i++){
+//            System.out.print(nums[i]+" ");
+//        }
+
+        //repeated element
+        int  arr[] ={4,5,7,6,5,9};
+        System.out.println(firstRepeatingElement(arr));
     }
 }
