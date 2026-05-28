@@ -110,6 +110,8 @@ public  class ArrayProblem4 {
     }
 
 
+    // pivot index
+
     static void main() {
 //        int[] arr ={2,5,7,3,1};
 //        System.out.println(Arrays.toString(twoSum(arr)));
