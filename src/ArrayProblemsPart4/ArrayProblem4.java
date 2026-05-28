@@ -129,6 +129,35 @@ public  class ArrayProblem4 {
         return -1;
     }
 
+
+    //finding pivot index
+    static int pivotIndex(int arr[]){
+        int n = arr.length;
+
+        int leftSum[]=  new int [n];
+        int rightSum[] = new int[n];
+
+        //fill leftSum array
+        leftSum[0] = arr[0];
+        for (int i = 1; i<n;i++){
+            leftSum[i]= leftSum[i-1]+ arr[i];
+        }
+
+        //fill rightSum array
+        rightSum[n-1] = arr[n-1];
+        for (int i =n-2; i>=0;i--){
+            rightSum[i] = rightSum[i+1]+ arr[i];
+        }
+
+        //check for equality
+        for (int i =0; i<n; i++){
+            if (leftSum[i]== rightSum[i]){
+                return i;
+            }
+        }
+return -1;
+    }
+
     static void main() {
 //        int[] arr ={2,5,7,3,1};
 //        System.out.println(Arrays.toString(twoSum(arr)));
@@ -149,7 +178,11 @@ public  class ArrayProblem4 {
 //        }
 
         //repeated element
-        int  arr[] ={4,5,7,6,5,9};
-        System.out.println(firstRepeatingElement(arr));
+//        int  arr[] ={4,5,7,6,5,9};
+//        System.out.println(firstRepeatingElement(arr));
+
+        //pivot index
+        int arr[] ={1,7,3,6,5,6 };
+        System.out.println(pivotIndex(arr));
     }
 }
