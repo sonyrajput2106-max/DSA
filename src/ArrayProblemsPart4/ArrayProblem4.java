@@ -1,7 +1,9 @@
 package ArrayProblemsPart4;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 
 public  class ArrayProblem4 {
@@ -158,6 +160,32 @@ public  class ArrayProblem4 {
 return -1;
     }
 
+
+    //finding missing number from the array with duplicates
+    static List<Integer> findMissingNumber(int[]  arr){
+        List<Integer> ans = new ArrayList<>();
+
+        //marking
+        int n = arr.length;
+        for (int index=0; index<n ; index++){
+            int value = Math.abs(arr[index]);
+            int position = value -1;
+            //mark krdo ye position
+            if (arr[position] >0){
+                arr[position] = -arr[position];
+            }
+        }
+
+        //travel the array nd whwenver encounter a positon market print the number
+        for (int i =0; i<n;i++){
+            if (arr[i]>0){
+                int valueAtThisIndex = i+1;
+                ans.add(valueAtThisIndex);
+            }
+        }
+        return ans;
+    }
+
     static void main() {
 //        int[] arr ={2,5,7,3,1};
 //        System.out.println(Arrays.toString(twoSum(arr)));
@@ -182,7 +210,11 @@ return -1;
 //        System.out.println(firstRepeatingElement(arr));
 
         //pivot index
-        int arr[] ={1,7,3,6,5,6 };
-        System.out.println(pivotIndex(arr));
+//        int arr[] ={1,7,3,6,5,6 };
+//        System.out.println(pivotIndex(arr));
+
+        //finding missing number with array with duplicates
+        int arr[] = {1,2,2,3,4,6,6};
+        System.out.println(findMissingNumber(arr));
     }
 }
