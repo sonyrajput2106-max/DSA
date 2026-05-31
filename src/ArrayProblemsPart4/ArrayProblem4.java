@@ -216,5 +216,7 @@ return -1;
         //finding missing number with array with duplicates
         int arr[] = {1,2,2,3,4,6,6};
         System.out.println(findMissingNumber(arr));
+
+        //jfdkjgkf
     }
 }
