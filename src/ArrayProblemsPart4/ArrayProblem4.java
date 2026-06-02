@@ -217,6 +217,20 @@ return -1;
 //
 //System.out.println(sorted);
 
+
+    //count negative numbers
+//    int[] arr = {-2, 5, 7, -1, 8};
+//
+//    int count = 0;
+//
+//for(int num : arr){
+//        if(num < 0){
+//            count++;
+//        }
+//    }
+//
+//System.out.println(count);
+
     static void main() {
 //        int[] arr ={2,5,7,3,1};
 //        System.out.println(Arrays.toString(twoSum(arr)));
