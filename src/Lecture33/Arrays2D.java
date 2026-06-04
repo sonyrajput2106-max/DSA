@@ -1,5 +1,6 @@
 package Lecture33;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Arrays2D {
@@ -40,6 +41,7 @@ public class Arrays2D {
 
 
         //wave print a matrix
+
         // let's move column wise
         for (int col =0; col<n; col++){
 //har ek column index ko check kro even/ odd k liye
@@ -61,9 +63,38 @@ public class Arrays2D {
         }
         return result;
     }
+
+    //transpose of a matrix
+static int [][] transpose(int[][] matrix){
+        if (matrix ==null || matrix.length ==0){
+            return new int[0][0];
+        }
+
+        //for original array
+    int totalRows = matrix.length;
+        int totalCols = matrix[0].length;
+
+        //for new array
+    int newTotalRows = totalCols;
+    int newTotalCols = totalRows;
+    int ans[][] = new int [newTotalRows][newTotalCols];
+
+    //actual logic
+    for (int row=0; row<totalRows;row++){
+        for (int col =0; col<totalCols;col++) {
+            ans[col][row] = matrix[row][col];
+        }
+    }
+    return ans;
+}
+
     static void main() {
-        int  arr[][] = {{1,2,3}, {4,5,6},{7,8,9}};
-        System.out.println(rowSum(arr));
+//        int  arr[][] = {{1,2,3}, {4,5,6},{7,8,9}};
+//        System.out.println(rowSum(arr));
+
+        //transpose
+        int matrix[][] ={{1,2,3}, {4,5,6}};
+        System.out.println(Arrays.deepToString(transpose(matrix)));
 
 
 
