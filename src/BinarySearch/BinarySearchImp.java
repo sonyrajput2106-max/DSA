@@ -80,14 +80,44 @@ return ans;
         return ans;
     }
 
+    static int peakMountElement(int arr[]){
+        int n = arr.length;
+        int s=0;
+        int e=n-1;
+        int ans =-1;
+
+        while(s<=e){
+            int mid =  s +(e-s)/2;
+
+            if (arr[mid]< arr[mid+1]){
+                //main ascending order m hu
+                //move right
+                s = mid +1;
+            }
+            else{
+                //arr[mid] > =arr[mid+1]
+                //i'm in decending order
+                //store ans nd move left
+                   ans = mid;
+                   //how i find the final solu
+                e=mid-1;
+                 }
+        }
+        return ans;
+    }
+
     static void main() {
 //         int arr[] ={-1,0,3,5,9,12};
 //        System.out.println(binarySearch(arr));
 
-        int target=35;
-       int arr[]={10,20,30,30,30,30,30,40,50};
+//        int target=35;
+//       int arr[]={10,20,30,30,30,30,30,40,50};
 //        int ans = getLowerBound(arr , target);
-        int ans = getUpperBound(arr, target);
+//        int ans = getUpperBound(arr, target);
+
+
+        int[] arr ={ 10,20,30,40,50,45,33};
+        int ans = peakMountElement(arr);
        System.out.println(ans);
     }
 }
