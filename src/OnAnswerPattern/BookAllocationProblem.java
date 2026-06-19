@@ -67,3 +67,4 @@ return ans;
         System.out.println("Minimum pages :"+ ans);
     }
 }
+
