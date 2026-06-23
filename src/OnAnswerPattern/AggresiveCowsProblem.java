@@ -43,9 +43,15 @@ public class AggresiveCowsProblem {
                 end = mid -1;
             }
         }
+        return ans;
     }
 
     static void main() {
+   int stalls[] ={1,2,8,4,9};
+   int k = 3;
+
+   int ans = aggresiveCows(stalls , k);
+        System.out.println(ans);
 
     }
 }
