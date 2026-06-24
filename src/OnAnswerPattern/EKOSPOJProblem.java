@@ -3,13 +3,13 @@ package OnAnswerPattern;
 public class EKOSPOJProblem {
 
     public  static boolean isValidAns(int trees[] , int m , int maxHeight){
-        int totalWoodCollected = 0;
+        long totalWoodCollected = 0;
 
         for(int i =0; i< trees.length; i++){
             if(trees[i] > maxHeight){
                 //iska mtlb , sawBlade overall tree height se chota h
                 //therefore, pkka kuch amount of wood dega katne par
-                int currTreeWoodCollected = trees[i]- maxHeight;
+                long currTreeWoodCollected = trees[i]- maxHeight;
                 totalWoodCollected += currTreeWoodCollected;
             }
         }
